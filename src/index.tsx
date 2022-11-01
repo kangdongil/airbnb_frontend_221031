@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { RouterProvider } from "react-router-dom";
 import router from "./router";
+import theme from "./theme";
 
 
 const root = ReactDOM.createRoot(
@@ -10,8 +11,8 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <ChakraProvider>
-      <RouterProvider router={router} />
+    <ChakraProvider theme={ theme }>
+      <RouterProvider router={ router } />
       </ChakraProvider>
   </React.StrictMode>
 );
