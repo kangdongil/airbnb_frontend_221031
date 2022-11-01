@@ -1,42 +1,29 @@
-import { Box, Grid, Heading, HStack, Image, Text, VStack } from "@chakra-ui/react";
-import { FaStar } from "react-icons/fa";
+import { Box, Button, Grid, Heading, HStack, Image, Text, VStack } from "@chakra-ui/react";
+import { FaStar, FaRegHeart } from "react-icons/fa";
+import Room from "../components/Room";
 
 export default function Home(){
-    const sampleImage = "https://a0.muscache.com/im/pictures/11120eb8-9c87-459b-b102-8c3acf279728.jpg?im_w=1200"
-    const sampleAddress = "Daegwalnyeong-myeon, Pyeongchang-gun, Kanwon Province, South Korea"
+    
+    
     return (
         <Grid
             mt={10}
-            px={10}
+            px={{
+                sm: 10,
+                lg: 40,
+            }}
             columnGap={4}
             rowGap={8}
-            templateColumns={"repeat(5, 1fr)"}
+            templateColumns={{
+                sm: "1fr",
+                md: "1fr 1fr",
+                lg: "repeat(3, 1fr)",
+                xl: "repeat(4, 1fr)",
+                "2xl": "repeat(5, 1fr)",
+            }}
         >
-            <VStack alignItems={"flex-start"}>
-                <Box overflow={"hidden"} mb={3} rounded="3xl">
-                <Image
-                    h="280"
-                    src={sampleImage}
-                />
-                </Box>
-                <Box>
-                    <Grid gap={2} templateColumns={"6fr 1fr"}>
-                        <Text as="b" noOfLines={1} fontSize="md">
-                            {sampleAddress}
-                        </Text>
-                        <HStack spacing={1}>
-                            <FaStar size={15} />
-                            <Text>5.0</Text>
-                        </HStack>
-                    </Grid>
-                    <Text fontSize={"sm"} color="gray.600">
-                        Seoul, S. Korea
-                    </Text>
-                </Box>
-                <Text fontSize={"sm"} color="gray.600">
-                    <Text as="b">$72</Text> / night
-                </Text>
-            </VStack>
+            {[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30
+            ].map(index => <Room key={index} />)}
         </Grid>
     );
 }
