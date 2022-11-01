@@ -28,7 +28,7 @@ export default function Room() {
                     <Text as="b" noOfLines={1} fontSize="md">
                         {sampleAddress}
                     </Text>
-                    <HStack spacing={1}>
+                    <HStack _hover={{color: "red.100"}} color={"gray"} spacing={1}>
                         <FaStar size={15} />
                         <Text>5.0</Text>
                     </HStack>
