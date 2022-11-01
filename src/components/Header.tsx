@@ -19,7 +19,7 @@ export default function Header(){
     const BrightnessIcon = useColorModeValue(FaMoon, FaSun);
     return (
         <HStack
-            py={"5"} px={"10"} borderBottomWidth={1}
+            py={"5"} px={"40"} borderBottomWidth={1}
             justifyContent={"space-between"}
         >
             <Box color={logoColor}>
