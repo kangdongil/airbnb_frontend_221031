@@ -10,3 +10,5 @@ export async function getRooms() {
     const response = await instance.get(`rooms/`);
     return response.data.content;
 }
+
+export const getRoom = () => instance.get(`rooms/1`).then((response) => response.data);
