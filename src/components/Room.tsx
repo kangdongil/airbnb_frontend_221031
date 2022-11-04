@@ -1,7 +1,16 @@
 import { Box, Button, Grid, HStack, Image, Text, useColorModeValue, VStack } from "@chakra-ui/react";
 import { FaRegHeart, FaStar } from "react-icons/fa";
 
-export default function Room() {
+interface IRoomProps {
+    // imageUrl: string;
+    name: string;
+    rating: number;
+    city: string;
+    country: string;
+    price: number;
+}
+
+export default function Room({ name, rating, city, country, price }: IRoomProps) {
     const sampleImage = "https://a0.muscache.com/im/pictures/11120eb8-9c87-459b-b102-8c3acf279728.jpg?im_w=1200"
     const sampleAddress = "Daegwalnyeong-myeon, Pyeongchang-gun, Kanwon Province, South Korea"
 
@@ -26,19 +35,19 @@ export default function Room() {
             <Box>
                 <Grid gap={2} templateColumns={"6fr 1fr"}>
                     <Text as="b" noOfLines={1} fontSize="md">
-                        {sampleAddress}
+                        {name}
                     </Text>
                     <HStack _hover={{color: "red.100"}} color={"gray"} spacing={1}>
                         <FaStar size={15} />
-                        <Text>5.0</Text>
+                        <Text>{rating}</Text>
                     </HStack>
                 </Grid>
                 <Text fontSize={"sm"} color={gray}>
-                    Seoul, S. Korea
+                    {city}, {country}
                 </Text>
             </Box>
             <Text fontSize={"sm"} color={gray}>
-                <Text as="b">$72</Text> / night
+                <Text as="b">${price}</Text> / night
             </Text>
         </VStack>
     );

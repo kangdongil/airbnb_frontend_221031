@@ -5,3 +5,4 @@
 `npm i react-icons --save`
 
 ##
+poetry add django-cors-headers
