@@ -3,6 +3,7 @@
 `npx create-react-app my-app --template @chakra-ui/typescript`
 `npm i react-router-dom`
 `npm i react-icons --save`
-
+`npm i @tanstack/react-query`
+`npm i axios`
 ##
 poetry add django-cors-headers
